@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import styles from './page.module.css'; // optional if you have custom styles
+import Link from 'next/link'; // optional if you have custom styles
 
 export default function HomePage() {
   return (

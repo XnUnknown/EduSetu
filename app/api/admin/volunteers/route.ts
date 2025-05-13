@@ -1,11 +1,13 @@
-import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 export async function GET() {
-  const Volunteers = await prisma.Volunteers.findMany({
-    orderBy: { createdAt: 'desc' },
-  });
-  return NextResponse.json(Volunteers);
+  try {
+    const volunteers = await prisma.volunteer.findMany()  // ✅ Capital "V"
+    return Response.json(volunteers)
+  } catch (error) {
+    console.error(error)
+    return new Response('Failed to fetch volunteers', { status: 500 })
+  }
 }

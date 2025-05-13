@@ -12,7 +12,6 @@ export async function POST(request: NextRequest) {
         name: body.name,  // Assuming your data has a name field
         email: body.email,  // Assuming your data has an email field
         subjectExpertise: body.subjectExpertise,  // Assuming your data has a subject field
-        contact: body.contact,
         availability: body.availability,  // Assuming your data has a contact field
       },
     });
