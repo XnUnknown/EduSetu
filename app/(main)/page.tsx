@@ -1,11 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link'; // optional if you have custom styles
-
+import Link from 'next/link';
+import Header from '../components/Header'; // optional if you have custom styles
+import "../globals.css"
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white text-gray-800 px-6 py-12">
+    <main className="min-h-screen bg-white text-gray-800 px-6 py-12 " >
+      <Header/>
       <section className="max-w-5xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-blue-700 mb-6">
           EduSetu – Bridging the Education Divide
@@ -31,7 +33,7 @@ export default function HomePage() {
       <section className="mt-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <Image
-            src="/images/education_connect.jpg"
+            src="/education_connect.png"
             alt="Connecting Educators"
             width={600}
             height={400}
@@ -42,7 +44,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold text-blue-700 mb-4">
             Why EduSetu?
           </h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-white-700 space-y-2">
             <li>Connects student volunteers with rural schools</li>
             <li>Supports online, offline, and video-based teaching</li>
             <li>Localized, multilingual learning content</li>
@@ -52,12 +54,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-20 bg-blue-50 py-12">
+      <section className="mt-20 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-blue-700 mb-4">
             Empowering Change Through Education
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-white-600 max-w-3xl mx-auto mb-6">
             EduSetu isn't just an app—it's a mission. With the help of student
             volunteers, CSR partners, NGOs, and governments, we’re making
             quality education a reality for every child, no matter where they
